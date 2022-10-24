@@ -1,10 +1,13 @@
 <iframe class="z-0 h-full w-full" src='https://my.spline.design/bandingcopy-911fb32df568877dfd6accf77c314a29/' frameborder='0'>
 </iframe>
+
 <div>
-<div class="card w-97 mt-4 glass z-10 absolute  left-1/2 transform -translate-x-1/2 -translate-y-2/4">
+
+<div class="card w-97 mt-4 glass z-10 absolute left-1/2 transform -translate-x-1/2 -translate-y-2/4">
 
 
-  <div class="card-body">
+  {{!-- <div class="card-body"> --}}
+    
     <p class="block text-md font-medium dark:text-gray-300 text-center font-bold text-white mb-2">{{user.username}}'s Projects</p>
 
 {{#each user}}
@@ -12,16 +15,16 @@
     {{#each projects}}
     
 <div class="avatar justify-center">
-{{!--   <div class="w-32 mt-2"> --}}
-    <img class="w-24 rounded-full" src="{{this.image}}">
-  {{!-- </div> --}}
+  <div class="w-16 mt-2">
+    <img class="rounded-full" src="{{this.image}}">
+  </div>
 </div>
     <h1 class="block text-md font-medium {{!-- dark:text-gray-300 --}} text-center {{!-- text-white --}} mb-2">{{this.title}}</h1>
     <p class="block text-md font-medium {{!-- dark:text-gray-300 --}} text-center {{!-- text-white --}} mb-2">{{this.description}}</p>
    {{!--  <p class="block text-md font-medium dark:text-gray-300 text-center text-white mb-2">{{this.link}}</p> --}}
     
       <div class="card-actions justify-center">
-    <a href="//{{this.link}}" target='_blank'>  <button class="btn btn-wide btn-sm rounded-full btn-outline {{!-- text-white --}} text-center "> Link for the project </button></a>
+    <a href="//{{this.link}}" target='_blank'>  <button class="btn btn-wide btn-sm rounded-full btn-outline mb-1 {{!-- text-white --}} text-center "> Link for the project </button></a>
   </div>
   
     <div class="card-actions justify-center">
@@ -40,16 +43,17 @@
     </form>
   </div>
     <div>
-        <h3 class="block text-md font-medium {{!-- dark:text-gray-300 --}} text-center text-white mb-4 ">Comments:</h3>
+        <h3 class="block text-md font-medium {{!-- dark:text-gray-300 --}} text-center {{!-- text-white --}} mb-2 ">Comments:</h3>
         {{#each this.comments}}
 <div class="avatar justify-center mb-1 ">
-  <div class="w-24 rounded-full ">
-        <img src="{{this.author.profilepicture}}" alt="">
+  <div class="w-12 rounded-full ">
+        <a href="/profile/{{this.author.username}}"><img src="{{this.author.profilepicture}}" alt=""></a> 
         </div>
         </div>
         <h1 class="block text-md font-medium {{!-- dark:text-gray-300 --}} text-center {{!-- text-white --}}">{{this.author.username}}:</h1>
-            <p class="block text-md font-medium {{!-- dark:text-gray-300 --}} text-center {{!-- text-white --}} mb-8">{{this.comment}}</p>
+            <p class="block text-md font-medium {{!-- dark:text-gray-300 --}} text-center {{!-- text-white --}} mb-4">{{this.comment}}</p>
         {{/each}}
+            <hr class="mb-2 opacity-25">
     </div>
     {{/each}}
 {{/each}}
@@ -72,7 +76,7 @@
 {{/if}}
 
 
-</div>
+{{!-- </div> --}}
 </div>
 
 <footer class="footer footer-center p-1 bg-base-100 text-base-content">
