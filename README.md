@@ -96,7 +96,7 @@
   course: {
     type: String,
     required: true,
-    enum: ['Web Dev', 'UX/UI', 'Data Analyst', 'Cybersecurity']
+    enum: ['Web Dev', 'UX/UI', 'Data Analytics', 'Cybersecurity']
 },
   campus: {
     type: String,
