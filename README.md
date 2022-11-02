@@ -195,12 +195,6 @@
 
 ## Packages:
 
-<a href="https://expressjs.com" target="_blank">ExpressJS</a>
-<br>
-<a href="https://nodejs.org/" target="_blank">NodeJS</a>
-<br>
-<a href="https://www.mongodb.com" target="_blank">MongoDB</a>
-<br>
 <a href="https://tailwindcss.com" target="_blank">TailwindCSS</a>
 <br>
 <br>
